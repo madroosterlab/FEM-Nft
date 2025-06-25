@@ -1,1 +1,78 @@
 @use "extras";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//colors
+$white: white;
+$black: black;
+$blue950: #0d192c;
+$blue900: #15263f;
+$blue800: #2e405a;
+$blue500: #8bacd9;
+$cyan: #00fff8;
+body {
+  @extend %flexer;
+  background-color: $blue950;
+  height: 100vh;
+}
+.container {
+  @extend %flexer;
+  border-radius: 15px;
+  width: 350px;
+  height: 596px;
+  background-color: $blue900;
+  padding: 24px;
+  justify-content: space-between;
+  align-items: flex-start;
+  img {
+    width: 302px;
+    border-radius: 8px;
+  }
+  h1 {
+    @extend %text1;
+    color: $white;
+  }
+  p {
+    @extend %text2;
+    color: $blue500;
+  }
+  .price-time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .eth-price {
+    &::before {
+      content: url("images/icon-ethereum.svg");
+      padding-right: 10px;
+    }
+    @extend %text3;
+    color: $cyan;
+  }
+  .time {
+    &::before {
+      content: url("images/icon-clock.svg");
+    }
+    color: $blue500;
+  }
+}
+
+.creator {
+  @extend %text3;
+  @extend %flexer;
+  flex-direction: row;
+  gap: 8px;
+  color: $blue500;
+  .name {
+    color: $white;
+  }
+  img {
+    width: 33px;
+    border: solid 1px white;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+}
