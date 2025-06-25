@@ -92,4 +92,37 @@ body {
   margin-right: 10px;
 }
 
+.container:hover h1 {
+  color: #00fff8;
+}
+.container:hover .name {
+  color: #00fff8;
+}
+.container:hover .image-wrapper {
+  position: relative;
+  max-width: 400px;
+  color: white;
+}
+.container:hover .image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+.container:hover .image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(0, 255, 248, 0.5);
+}
+.container:hover .icon::before {
+  content: url("images/icon-view.svg");
+  position: absolute;
+  bottom: 120px;
+  left: 130px;
+}
+
 /*# sourceMappingURL=style.css.map */
