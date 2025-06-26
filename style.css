@@ -92,23 +92,20 @@ body {
   margin-right: 10px;
 }
 
-.container:hover h1 {
-  color: #00fff8;
+.hover:hover {
+  cursor: pointer;
 }
-.container:hover .name {
-  color: #00fff8;
-}
-.container:hover .image-wrapper {
+.hover:hover .image-wrapper {
   position: relative;
   max-width: 400px;
   color: white;
 }
-.container:hover .image-wrapper img {
+.hover:hover .image-wrapper img {
   width: 100%;
   height: auto;
   display: inline-block;
 }
-.container:hover .image-wrapper::before {
+.hover:hover .image-wrapper::before {
   content: "";
   position: absolute;
   top: 0;
@@ -118,11 +115,21 @@ body {
   border-radius: 8px;
   background: rgba(0, 255, 248, 0.5);
 }
-.container:hover .icon::before {
+.hover:hover .icon::before {
   content: url("images/icon-view.svg");
   position: absolute;
   bottom: 120px;
   left: 130px;
+}
+
+h1:hover {
+  cursor: pointer;
+  color: #00fff8;
+}
+
+.name:hover {
+  cursor: pointer;
+  color: #00fff8;
 }
 
 /*# sourceMappingURL=style.css.map */

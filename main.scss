@@ -77,13 +77,8 @@ body {
   }
 }
 //hover style
-.container:hover {
-  h1 {
-    color: $cyan;
-  }
-  .name {
-    color: $cyan;
-  }
+.hover:hover {
+  cursor: pointer;
   .image-wrapper {
     position: relative;
     max-width: 400px;
@@ -112,4 +107,12 @@ body {
     bottom: 120px;
     left: 130px;
   }
+}
+h1:hover {
+  cursor: pointer;
+  color: $cyan;
+}
+.name:hover {
+  cursor: pointer;
+  color: $cyan;
 }
